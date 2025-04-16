@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Home | ColonelMDoge</title>
+
+    <style>
+      body, h1, h2, h3, h4, h5, h6, p {font-family: "Roboto", sans-serif;}
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      .bgimg1 {
+        position: relative;
+        background-color: rgba(76,175,80, 1.0);
+        background-size: cover;      
+        background-repeat: no-repeat; 
+        background-position: center; 
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .titletext {
+        font-family: "monospace", sans-serif;
+        text-align: center;
+        font-size: 3rem;         
+        background-color: rgba(0, 0, 0, 0.6); 
+        color: white;          
+        padding: 20px 40px; 
+      }
+      .profile-pic {
+        position: absolute;
+        bottom: -50px;            
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;               
+        height: 100px;
+        border-radius: 50%;        
+        border: 5px solid black;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      }
+      .about {
+        padding-top: 35px;
+      }
+      .centered {
+        text-align: center;
+      }
+      .paragraph {
+        padding-left: 250px; 
+        padding-right: 250px; 
+        text-align: left;
+        line-height: 1.5;
+      }
+      .links {
+        display: flex;
+        justify-content: center;  /* Centers the items horizontally */
+        align-items: center;      /* Centers the items vertically (if needed) */
+        padding-top: 75px;
+        gap: 20px;
+        width: 100%;  
+      }
+      .footer {
+        margin-top: 25px;
+        background-color: rgba(76,175,80, 1.0);
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "monospace", sans-serif;
+        color: white;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <div class="bgimg1">
+      <span class = "titletext"> ColonelMDoge </span>
+    <img src="CMDProfileNew.png" class="profile-pic">
+    </div>
+
+    <div class="links centered">
+      <a href="https://github.com/ColonelMDoge" target="_blank" style="text-decoration: none; color: inherit;">
+        <i class="fa-brands fa-github"></i> GitHub 
+      </a>
+      <a href="https://www.instagram.com/ColonelMDoge" target="_blank" style="text-decoration: none; color: inherit;">
+        <i class="fab fa-instagram"></i> Instagram 
+      </a>
+      <a href="https://steamcommunity.com/profiles/76561199079658957/" target="_blank" style="text-decoration: none; color: inherit;">
+        <i class="fa-brands fa-steam"></i> Steam 
+      </a>
+      <p style="margin: 0;">  
+        <i class="fa-brands fa-discord"></i>
+        colonelmdoge
+      </p>
+      <p style="margin: 0;">  
+        <i class="fa-solid fa-envelope"></i>
+        zhoualex01@gmail.com
+      </p>
+    </div>
+
+    <div class="about centered">
+      <p>
+        <em> Alex Zhou | Middlefield Collegiate Insitute </em>
+      </p>
+      <figure class="school-image centered">
+        <img src="middlefield.jpeg" style="max-width: 80%; border-radius: 15px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+        <figcaption style="margin-top: 10px; font-style: italic; color: #555;">
+          I'm only here because it was the closest school to get to.
+        </figcaption>
+      </figure>
+      <h1 style="padding-top: 35px;"> ABOUT ME </h1>
+      <p class="paragraph"> I honestly don't know why I made this. I was bored I guess. Probably just wanted to one up and make myself stand out but created this mess anyway. I like science-fiction, FromSoftware, heavy automation games, and Java. Funny thing is that I was supposed to be interested in HTML, CSS, and JS until Python said hello. Then the snake got hunted and was replaced by C++ in the hopes of making games. Unfortunately the motivation didn't amount to anything and here I am stuck with Java. Never had any coffee though. I believe I am fine with Java because we both share the same mindset: verbose, boilerplate yap that condenses to a single idea. </p>
+      <h1 style="padding-top: 35px;"> MY EXPERIENCE </h1>
+      <ul style="list-style-type: disc; padding-left: 40px; text-align: left; display: inline-block;">
+        <li style="padding-bottom: 10px;"> 4+ Years of Customer Service / Handling Money / Operating in a Beverage Stall </li>
+        <li style="padding-bottom: 10px;"> 3+ Years of Java (My strongest language!) </li>
+        <li style="padding-bottom: 10px;"> 1 Year of C++ / Python / HTML / CSS / JS / SQL </li>
+      </ul>
+      <em style="display: block; color: #555"> Employment gods I know that my experience is pretty mid but I need financial security!</em>
+    </div>
+    <footer class="footer">
+    <p>&copy; 2025 ColonelMDoge. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
