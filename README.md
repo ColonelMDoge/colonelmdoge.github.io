@@ -1,1 +1,0 @@
-# colonelmdoge.github.io
