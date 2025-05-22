@@ -59,8 +59,8 @@
       }
       .links {
         display: flex;
-        justify-content: center;  /* Centers the items horizontally */
-        align-items: center;      /* Centers the items vertically (if needed) */
+        justify-content: center; 
+        align-items: center;      
         padding-top: 75px;
         gap: 20px;
         width: 100%;  
@@ -87,7 +87,7 @@
 
     <div class="bgimg1">
       <span class = "titletext"> ColonelMDoge </span>
-    <img src="CMDProfileNew.png" class="profile-pic">
+    <img src="resources/CMDProfileNew.png" class="profile-pic">
     </div>
 
     <div class="links centered">
@@ -112,16 +112,24 @@
 
     <div class="about centered">
       <p>
-        <em> Alex Zhou | Middlefield Collegiate Institute </em>
+        <em> Alex Zhou | Middlefield Collegiate Institute | University of Waterloo: Software Engineering</em>
       </p>
-      <figure class="school-image centered">
-        <img src="middlefield.jpeg" style="max-width: 80%; border-radius: 15px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
-        <figcaption style="margin-top: 10px; font-style: italic; color: #555;">
-          I'm only here because it was the closest school to get to.
-        </figcaption>
-      </figure>
+      <div style = "display: inline-flex;">
+        <figure>
+          <img src="resources/Middlefield.jpeg" style="width: 600px; height: 250px; border-radius: 15px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); object-fit: cover; object-position: center;">
+          <figcaption style="margin-top: 10px; font-style: italic; color: #555;">
+            I'm only here because it was the closest school to get to.
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="resources/Waterloo.jpg" style="height: 250px; border-radius: 15px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);">
+          <figcaption style="margin-top: 10px; font-style: italic; color: #555;">
+            The skyscraper rock in their museum is larger than this sign.
+          </figcaption>
+        </figure>
+      </div>
       <h1 style="padding-top: 35px;"> ABOUT ME </h1>
-      <p class="paragraph"> I honestly don't know why I made this. I was bored I guess. Probably just wanted to one up and make myself stand out but created this mess anyway. I like science-fiction, FromSoftware, heavy automation games, and Java. Funny thing is that I was supposed to be interested in HTML, CSS, and JS until Python said hello. Then the snake got hunted and was replaced by C++ in the hopes of making games. Unfortunately the motivation didn't amount to anything and here I am stuck with Java. Never had any coffee though. I believe I am fine with Java because we both share the same mindset: verbose, boilerplate yap that condenses to a single idea. </p>
+      <p class="paragraph"> I honestly don't know why I made this. I was bored I guess. Probably just wanted to one up and make myself stand out but created this mess anyway. I like science-fiction, FromSoftware, heavy automation games, and Java. Funny thing is that I was supposed to be interested in HTML, CSS, and JS until Python said hello. Then the snake got hunted and was replaced by C++ in the hopes of making games. Unfortunately the motivation didn't amount to anything and here I am stuck with Java. Never had any coffee though. I believe I am fine with Java because we both share the same mindset: verbose, boilerplate yap that condenses to a single idea. I absolutely cannot wait to get decimated in post-secondary!</p>
       <h1 style="padding-top: 35px;"> MY EXPERIENCE </h1>
       <ul style="list-style-type: disc; padding-left: 40px; text-align: left; display: inline-block;">
         <li style="padding-bottom: 10px;"> 4+ Years of Customer Service / Handling Money / Operating in a Beverage Stall </li>
@@ -133,7 +141,7 @@
       <em style="display: block; color: #555"> Employment gods I know that my experience is pretty mid but I need financial security!</em>
       <h1 style="padding-top: 35px;"> MY "EXPERIMENTS" </h1>
       <div class="project">
-        <img src="CT10GIF.gif" style="width: 256px; height: 256px; border: 3px solid black; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+        <img src="resources/CT10GIF.gif" style="width: 256px; height: 256px; border: 3px solid black; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
         <div style = "width: 500px; text-align: left;">
           <h2> Click Till 10! </h2>
           <p>This was a small game from 2022 when I was into the Stanley Parable. I actually had motivation at the time. My biggest challenge was creating the text engine (which sucks) and a story to justify clicking ten times. I was also into the Serializable interface, so there's that I guess. Design wise, it could be way better, but the story is peak.</p>
@@ -144,10 +152,10 @@
           <h2> RPG Dialogue Handler </h2>
           <p>Back when I had hopes and dreams, I wanted to make a story about a hero going across multiple dimensions to retrieve fragments of stolen shards that powered a barrier to stop an oncoming asteroid. This is one example of dialogue that could have happened between the protagonist and one of the guardians that protected the shard for altruistic and monetary gain.</p>
         </div>
-        <img src="Shard.gif" style="width: 325px; height: 256px; border: 3px solid black; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+        <img src="resources/Shard.gif" style="width: 325px; height: 256px; border: 3px solid black; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
       </div>
       <div class="project">
-        <img src="PNCTSE.gif" style="width: 400px; height: 256px; border: 3px solid black; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+        <img src="resources/PNCTSE.gif" style="width: 400px; height: 256px; border: 3px solid black; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
         <div style = "width: 500px; text-align: left;">
           <h2> PNC Tilesheet Editor </h2>
           <p>When I was into tile based games, I wanted to create an application to help me use tilesheets from the internet and convert them into tilesets for me to build my own maps. It also can join tiles into a singular tilesheet, and can split an image into pieces to stuff on Mindustry screens hahaha. Major inspiration from a Reddit post online because I cannot design anything. Making this gave me the hard reality of dealing with LayoutManagers.</p>
@@ -158,7 +166,14 @@
           <h2> PNCBot </h2>
           <p>So what does PNC even mean? It stands for the three Minecraft usernames of my bros and I when we grind CurseForge modpacks together. The bot is capable of playing music online to solve the problem of unsupported music bots. It can also scrape citations and I added a Groq AI thing to pretend that the bot has intelligence to make it cooler. Still thinking how to allow it to handle TTS and STT though; that would be peak.</p>
         </div>
-        <img src="PNCBot.gif" style="width: 325px; height: 256px; border: 3px solid black; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+        <img src="resources/PNCBot.gif" style="width: 325px; height: 256px; border: 3px solid black; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
+      </div>
+      <div class="project">
+        <img src="resources/SavedModelTester.gif" style="width: 425px; height: 256px; border: 3px solid black; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
+        <div style = "width: 500px; text-align: left;">
+          <h2> Java SavedModel Tester </h2>
+          <p>I was having so much fun with Teachable Machine when I realized that Java support was limited. The internet barely had any information, so I had to scrape what I could find to create a GUI that can test its models. Unfortunately, only the image recognition is compatible with Java. The fun thing about this is that I can link the model outputs to keybinds, so I can basically control Snake or Pac-Man with my hands. Pretty cool, huh? Lol am I not supposed to be doing the things in my bucket list? I'm just doing side quests for no reason haha.</p>
+        </div>
       </div>
       <h1 style="padding-top: 35px;"> MY BUCKET LIST </h1>
       <ul style="list-style-type: disc; padding-left: 40px; text-align: left; display: inline-block;">
