@@ -1,0 +1,79 @@
+body, h1, h2, h3, h4, h5, h6, p {font-family: "Roboto", sans-serif;}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+.bgimg1 {
+  position: relative;
+  background-color: rgba(76,175,80, 1.0);
+  background-size: cover;      
+  background-repeat: no-repeat; 
+  background-position: center; 
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titletext {
+  font-family: "monospace", sans-serif;
+  text-align: center;
+  font-size: 3rem;         
+  background-color: rgba(0, 0, 0, 0.6); 
+  color: white;          
+  padding: 20px 40px; 
+}
+.profile-pic {
+  position: absolute;
+  bottom: -50px;            
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;               
+  height: 100px;
+  border-radius: 50%;        
+  border: 5px solid black;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.about {
+  padding-top: 35px;
+}
+.centered {
+  text-align: center;
+}
+.paragraph {
+  padding-left: 250px; 
+  padding-right: 250px; 
+  text-align: left;
+  line-height: 1.5;
+}
+.links {
+  display: flex;
+  justify-content: center; 
+  align-items: center;      
+  padding-top: 75px;
+  gap: 20px;
+  width: 100%;  
+}
+.footer {
+  margin-top: 25px;
+  background-color: rgba(76,175,80, 1.0);
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "monospace", sans-serif;
+  color: white;
+}
+.project {
+  padding-top: 50px;
+  display: inline-flex;
+  gap: 100px;
+}
+.shadow {
+  border-radius: 15px; 
+  margin: 20px 0; 
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+.shadowBorder {
+  border: 3px solid black; 
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
