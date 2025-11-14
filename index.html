@@ -6,17 +6,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="resources/CMDProfileNew.png">
-    <title>Home | ColonelMDoge</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Home | ColonelMDoge</title>
   </head>
 
-  <body>
+  <header>
+    <nav class="nav">
+      <ul class = "outerUl">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experiments">Experiments</a></li>
+        <li class="dropdown">
+          <a href="#">Guides</a>
+          <ul class="dropdown-content">
+            <li><a href="guide1.html">How To Setup An Oracle Cloud Server</a></li>
+            <li><a href="guide2.html">Configuring Putty, WinSCP, and Tmux</a></li>
+            <li><a href="guide3.html">Minecraft Server Setup Guide</a></li>
+            <li><a href="guide3.html">How To Make A Discord Bot Using JDA</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
+
+  <body>
     <div class="bgimg1">
       <span class = "titletext"> ColonelMDoge </span>
       <img src="resources/CMDProfileNew.png" class="profile-pic">
     </div>
-
+    <div id="about"></div>
     <div class="links centered">
       <a href="https://linkedin.com/in/alexzhou01" target="_blank" style="text-decoration: none; color: inherit;">
         <i class="fa-brands fa-linkedin"></i> LinkedIn 
@@ -31,12 +50,10 @@
         <i class="fa-brands fa-steam"></i> Steam 
       </a>
       <p style="margin: 0;">  
-        <i class="fa-brands fa-discord"></i>
-        colonelmdoge
+        <i class="fa-brands fa-discord"></i> colonelmdoge
       </p>
       <p style="margin: 0;">  
-        <i class="fa-solid fa-envelope"></i>
-        zhoualex01@gmail.com
+        <i class="fa-solid fa-envelope"></i> zhoualex01@gmail.com
       </p>
     </div>
 
@@ -60,8 +77,9 @@
       </div>
 
       <h1 style="padding-top: 35px;"> ABOUT ME </h1>
-      <p class="paragraph"> <em>"I'm just a guy that makes memes based on whatever is happening in my life."</em> I like science-fiction, FromSoftware games, Undertale, Deltarune, Touhou, and automation/resource management games. Currently spending my spare time trying to squeeze out more side projects and playing Magic: The Gathering. University made me realize that coffee is an asset and that the FlockStop has the best french vanilla ever.</p>
+      <p class="paragraph"> <em> "I'm just a guy that makes memes based on whatever is happening in my life." </em> I like science-fiction literature, FromSoftware games, Undertale, Deltarune, Touhou, and automation/resource management games. Currently spending my spare time trying to squeeze out more side projects and playing Magic: The Gathering. University made me realize that coffee is an asset and that the FlockStop has the best french vanilla ever. I am also looking for co-op work for Spring 2026. You can download my resume by clicking <a href="resources/Alex's Resume.pdf" download="Alex's Resume">here!</a></p>
 
+      <div id="skills"></div>
       <h1 style="padding-top: 35px;"> MY EXPERIENCE </h1>
       <ul style="list-style-type: disc; padding-left: 40px; text-align: left; display: inline-block;">
         <li style="padding-bottom: 10px;"> 4+ Years of Retail Experience</li>
@@ -75,8 +93,9 @@
       <h1 style="padding-top: 35px;"> MY SPICY MEMES </h1>
       <iframe src="https://snapwidget.com/embed/1110743" class="snapwidget-widget shadow" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:960px; height:320px;" title="Posts from Instagram"></iframe>
 
+      <div id ="experiments"></div>
       <h1 style="padding-top: 35px;"> MY "EXPERIMENTS" </h1>
-
+      
       <div class="project">
         <img src="resources/CT10GIF.gif"  class="shadowBorder" style="width: 256px; height: 256px;">
         <div style = "width: 500px; text-align: left;">
@@ -96,8 +115,8 @@
       <div class="project">
         <img src="resources/PNCTSE.gif" class="shadowBorder" style="width: 400px; height: 256px;">
         <div style = "width: 500px; text-align: left;">
-          <h2> PNC Tilesheet Editor </h2>
-          <p>When I was into tile based games, I wanted to create an application to help me use tilesheets from the internet and convert them into tilesets for me to build my own maps. It also can join tiles into a singular tilesheet, and can split an image into pieces to stuff on Mindustry screens hahaha. Major inspiration from a Reddit post online because I cannot design anything. Making this gave me the hard reality of dealing with LayoutManagers.</p>
+           <h2> PNC Tilesheet Editor </h2>
+           <p>When I was into tile based games, I wanted to create an application to help me use tilesheets from the internet and convert them into tilesets for me to build my own maps. It also can join tiles into a singular tilesheet, and can split an image into pieces to stuff on Mindustry screens hahaha. Major inspiration from a Reddit post online because I cannot design anything. Making this gave me the hard reality of dealing with LayoutManagers.</p>
         </div>
       </div>
 
