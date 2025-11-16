@@ -14,6 +14,19 @@ html, body {
   justify-content: center;
   align-items: center;
 }
+
+.bgimg2 {
+  position: relative;
+  background-color: rgba(76,175,80, 1.0);
+  background-size: cover;      
+  background-repeat: no-repeat; 
+  background-position: center; 
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .titletext {
   font-family: "monospace", sans-serif;
   text-align: center;
@@ -39,7 +52,17 @@ html, body {
 .centered {
   text-align: center;
 }
+.leftwards {
+  position: relative;
+  text-align: left;
+}
 .paragraph {
+  padding-left: 250px; 
+  padding-right: 250px; 
+  text-align: left;
+  line-height: 1.5;
+}
+.guideText p {
   padding-left: 250px; 
   padding-right: 250px; 
   text-align: left;

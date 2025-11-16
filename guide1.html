@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="resources/CMDProfileNew.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>OCI Setup</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav">
+        <ul class = "outerUl">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Guides</a>
+            <ul class="dropdown-content">
+              <li><a href="guide1.html">How To Setup An Oracle Cloud Server</a></li>
+              <li><a href="guide2.html">Configuring Putty, WinSCP, and Tmux</a></li>
+              <li><a href="guide3.html">Minecraft Server Setup Guide</a></li>
+              <li><a href="guide3.html">How To Make A Discord Bot Using JDA</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <div class="bgimg2">
+      <span class = "titletext"> How To Setup A Cloud Oracle Server </span>
+    </div>
+
+    <div class="about centered guideText">
+      <h1 style="padding-top: 35px;"> What is an OCI? </h1>
+      <p>OCI, or Oracle Cloud Infrastructure, is a cloud platform developed by the Oracle Corporation who also obtained the rights to the JAVA language by purchasing Sun Microsystems, the company who created the language. OCI allows anyone to create their own compute instances to manage databases, storage blocks, servers, and websites. The platform's "Always Free" plan allows a taste for the dozens of services that they provide, whether it be IaaS, SaaS, DaaS, or PaaS. The following below demonstrates how to setup a Cloud Compute Instance. </p>
+
+      <p><em> For more information, head to <b><a href="https://www.oracle.com/cloud/why-oci/">https://www.oracle.com/cloud/why-oci/</a></b> before continuing.</em></p>
+
+      <p><b>NOTE:</b> A credit card is required to start the "Always Free" plan. You may be charged a miniscule amount to verify the card, but it will be refunded soon after.</p>
+
+      <h1 style="padding-top: 35px;">Navigating Through The Cloud </h1>
+
+      <p>Head to <b><a href="https://www.oracle.com/cloud/free/">https://www.oracle.com/cloud/free/</a></b> to get started. During the sign up process, you will need to enter information such as your name, date of birth, home address, email, credit card information, etc. You will have to setup MFA as well. After successfully signing up, log in to your account to access the Oracle Cloud.</p>
+
+      <p>Under "Service Links", click on "Instances Compute". If it is not there, search for it using the search bar. Press the "Create Instance" button to create a new instance.</p>
+
+      <p>Choose a name for your instance. An example could be: "MyInstance".</p>
+
+      <p>Scroll down to "Image and shape". Click on the "Edit" button on the top right to take you to the details of the processor. Ignore the "Image" and go to the "Shape". Choose the "Ampere Arm-based processor" and check the "VM.Standard.A1.Flex". For the "Always Free" plan, you are limited to 4 OCPUs and 24GB RAM of all Ampere processors combined. If you do not have enough OCPUs or RAM for your next Ampere processor instance, simply choose the "Specialty and previous generation" processor. You will only get 1 OCPU and 1GB RAM, however, so partition your shapes wisely!</p>
+
+      <p>Continue on to the "Add SSH Keys" section and tick on "Generate a key pair for me". Download the private key and/or the public key. (The public key will not be used for later steps)</p>
+
+      <p>After everything is to your satisfaction, click on the "Create" button on the bottom. Congratulations, you have just made your very first instance!</p>
+
+      <h1 style="padding-top: 35px;"> Configuring Your Server's Network </h1>
+
+      <p>Servers have default ports that are required to connect to the server. For example, Minecraft servers have the default port of 25565, and Mindustry servers have the default port of 6567. To allow these ports, you need to add them to a security list.</p>
+
+      <p>Go to your newly created instance and head to the "Primary VNIC" section. Click on the subnet link, and click on the default security list link. You will then be taken to the security list where you can add ingress rules.</p>
+
+      <p>Click on the "Add Ingress Rules" button. The source type should be "CIDR", and the source CIDR should be "0.0.0.0/0". Select which IP Protocol you require. Have the source port range selected to "All", and choose the destination port range (The default port of your server). The description is optional. Save the changes.</p>
+
+      <p><b>NOTE:</b> You must add two ingress rules: one for the TCP IP Protocol, and one for the UDP IP Protocol.</p>
+
+      Congratulations! You successfully have setup your instance and are ready to access the instance through a Secure Shell (SSH)
+    </div>
+    <footer class="footer">
+    <p>&copy; 2025 ColonelMDoge. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
