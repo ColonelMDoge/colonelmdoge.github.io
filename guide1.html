@@ -84,6 +84,17 @@
 
       <p><b>NOTE:</b> NEVER share your PuTTY key or OCI key to ANYONE YOU DO NOT TRUST!</p>
 
+      <h1>Transferring And Editing Data Using WinSCP</h1>
+
+      <p>WinSCP is a free application used for SSH file transferring. That is, it allows you to transfer files from your computer to the instance. Like PuTTY, it is crucial for setting up servers because you need to transfer server files in bulk (such as a Minecraft server jar file) to the instance. Without this program, managing files will be very difficult and cumbersome. Head to the website <b><a href="https://winscp.net/eng/download.php">https://winscp.net/eng/download.php</a></b> to download WinSCP.</p>
+
+      <p>Creating a WinSCP session is very similar to creating a PuTTY session. Fill the <b>"Host Name"</b> with the IP of your instance and fill the <b>"Username"</b> with the default username <em>(both located at your instance on the OCI website).</em> Then, click on the <b>"Advanced"</b> button to see the advanced site settings. Navigate to SSH -> Authentication and upload the PuTTY private key there. After, save the information by pressing the <b>"Save"</b> button and name the site whatever you want.</p>
+
+      <p>You can directly edit contents of files by simply double clicking them, adding new information, then saving the file. Some files may need higher levels of permission in order to run. To solve this, right click on the file and select <b>"Properties"</b> and check on all the checkboxes in the <b>"Permissions"</b> section to run the file. You can also download or delete files in the instance by right clicking the file as well. However, uploading and downloading files may take long periods of time depending on the size of the file.</p>
+
+      <p><b>NOTE:</b>It is recommended that any external files you upload to the instance should all be in the /home/opc directory, as the rest of the directories contain instance files that should not be touched.<em>(Unless you know what you are doing).</em></p>
+
+      <p><b>SIDE NOTE:</b> All JAVA files will be located in the /usr/java directory.</p>
     </div>
     <footer class="footer">
     <p>&copy; 2025 ColonelMDoge. All rights reserved.</p>
