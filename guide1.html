@@ -19,8 +19,7 @@
             <a href="#">Guides</a>
             <ul class="dropdown-content">
               <li><a href="guide1.html">How To Setup An Oracle Cloud Server</a></li>
-              <li><a href="guide2.html">Configuring Putty, WinSCP, and Tmux</a></li>
-              <li><a href="guide3.html">Minecraft Server Setup Guide</a></li>
+              <li><a href="guide2.html">Minecraft Server Setup Guide</a></li>
               <li><a href="guide3.html">How To Make A Discord Bot Using JDA</a></li>
             </ul>
           </li>
@@ -34,38 +33,57 @@
     </div>
 
     <div class="about centered guideText">
-      <h1 style="padding-top: 35px;"> What is an OCI? </h1>
-      <p>OCI, or Oracle Cloud Infrastructure, is a cloud platform developed by the Oracle Corporation who also obtained the rights to the JAVA language by purchasing Sun Microsystems, the company who created the language. OCI allows anyone to create their own compute instances to manage databases, storage blocks, servers, and websites. The platform's "Always Free" plan allows a taste for the dozens of services that they provide, whether it be IaaS, SaaS, DaaS, or PaaS. The following below demonstrates how to setup a Cloud Compute Instance. </p>
+      <h1> Who Should Read This Guide?</h1>
+      <p>If you are looking for a way to run a server absolutely for free while getting access to reliable computer power, then this guide is for you! It was constructed based on previous research to solve this exact problem. <em>(Specifically, how would someone run a 24/7 Minecraft server that is not performatively underwhelming compared to online free services?)</em></p>
+
+      <h1> What is an OCI? </h1>
+      <p>OCI, or Oracle Cloud Infrastructure, is a cloud platform developed by the Oracle Corporation who also obtained the rights to the JAVA language by purchasing Sun Microsystems, the company who created the language. OCI allows anyone to create their own compute instances to manage databases, storage blocks, servers, and websites. The platform's <b>"Always Free"</b> plan allows a taste for the dozens of services that they provide, whether it be IaaS, SaaS, DaaS, or PaaS. The following below demonstrates how to setup a Cloud Compute Instance. </p>
 
       <p><em> For more information, head to <b><a href="https://www.oracle.com/cloud/why-oci/">https://www.oracle.com/cloud/why-oci/</a></b> before continuing.</em></p>
 
       <p><b>NOTE:</b> A credit card is required to start the "Always Free" plan. You may be charged a miniscule amount to verify the card, but it will be refunded soon after.</p>
 
-      <h1 style="padding-top: 35px;">Navigating Through The Cloud </h1>
+      <div id="cloud_nav"></div>
+      <h1>Navigating Through The Cloud </h1>
 
       <p>Head to <b><a href="https://www.oracle.com/cloud/free/">https://www.oracle.com/cloud/free/</a></b> to get started. During the sign up process, you will need to enter information such as your name, date of birth, home address, email, credit card information, etc. You will have to setup MFA as well. After successfully signing up, log in to your account to access the Oracle Cloud.</p>
 
-      <p>Under "Service Links", click on "Instances Compute". If it is not there, search for it using the search bar. Press the "Create Instance" button to create a new instance.</p>
+      <p>Under <b>"Service Links"</b>, click on <b>"Instances Compute"</b>. If it is not there, search for it using the search bar. Press the <b>"Create Instance"</b> button to create a new instance.</p>
 
-      <p>Choose a name for your instance. An example could be: "MyInstance".</p>
+      <p>Choose a name for your instance. An example could be: <em>"MyInstance"</em>.</p>
 
-      <p>Scroll down to "Image and shape". Click on the "Edit" button on the top right to take you to the details of the processor. Ignore the "Image" and go to the "Shape". Choose the "Ampere Arm-based processor" and check the "VM.Standard.A1.Flex". For the "Always Free" plan, you are limited to 4 OCPUs and 24GB RAM of all Ampere processors combined. If you do not have enough OCPUs or RAM for your next Ampere processor instance, simply choose the "Specialty and previous generation" processor. You will only get 1 OCPU and 1GB RAM, however, so partition your shapes wisely!</p>
+      <p>Scroll down to <b>"Image and shape"</b>. Click on the <b>"Edit"</b> button on the top right to take you to the details of the processor. Ignore the <b>"Image"</b> and go to the <b>"Shape"</b>. Choose the <b>"Ampere Arm-based processor"</b> and check the <b>"VM.Standard.A1.Flex"</b>. For the <b>"Always Free"</b> plan, you are limited to 4 OCPUs and 24GB RAM of all Ampere processors combined. If you do not have enough OCPUs or RAM for your next Ampere processor instance, simply choose the <b>"Specialty and previous generation"</b> processor. You will only get 1 OCPU and 1GB RAM, however, so partition your shapes wisely!</p>
 
-      <p>Continue on to the "Add SSH Keys" section and tick on "Generate a key pair for me". Download the private key and/or the public key. (The public key will not be used for later steps)</p>
+      <p>Continue on to the <b>"Add SSH Keys"</b> section and tick on <b>"Generate a key pair for me"</b>. Download the private key and/or the public key.<em> (The public key will not be used for later steps)</em></p>
 
       <p>After everything is to your satisfaction, click on the "Create" button on the bottom. Congratulations, you have just made your very first instance!</p>
 
-      <h1 style="padding-top: 35px;"> Configuring Your Server's Network </h1>
+      <h1> Configuring Your Server's Network </h1>
 
       <p>Servers have default ports that are required to connect to the server. For example, Minecraft servers have the default port of 25565, and Mindustry servers have the default port of 6567. To allow these ports, you need to add them to a security list.</p>
 
-      <p>Go to your newly created instance and head to the "Primary VNIC" section. Click on the subnet link, and click on the default security list link. You will then be taken to the security list where you can add ingress rules.</p>
+      <p>Go to your newly created instance and head to the <b>"Primary VNIC"</b> section. Click on the subnet link, and click on the default security list link. You will then be taken to the security list where you can add ingress rules.</p>
 
-      <p>Click on the "Add Ingress Rules" button. The source type should be "CIDR", and the source CIDR should be "0.0.0.0/0". Select which IP Protocol you require. Have the source port range selected to "All", and choose the destination port range (The default port of your server). The description is optional. Save the changes.</p>
+      <p>Click on the <b>"Add Ingress Rules"</b> button. The source type should be <b>"CIDR"</b>, and the source CIDR should be <b>"0.0.0.0/0".</b> Select which IP Protocol you require. Have the source port range selected to <b>"All"</b>, and choose the destination port range (The default port of your server). The description is optional. Save the changes.</p>
 
       <p><b>NOTE:</b> You must add two ingress rules: one for the TCP IP Protocol, and one for the UDP IP Protocol.</p>
 
-      Congratulations! You successfully have setup your instance and are ready to access the instance through a Secure Shell (SSH)
+      <h1>Using Your SSH Private Key</h1>
+      <p>A Secure Shell, or SSH, is a encrypted network protocol that allows two computers to communicate with each other securely over an unsecure network. An SSH is used to remotely access an OCI to execute commands, such as starting up servers, or downloading libraries from the internet. The SSH used to access the OCI will be an application called PuTTY. Head to the website <b><a href ="https://www.chiark.greenend.org.uk/~sgtatham/putty">https://www.chiark.greenend.org.uk/~sgtatham/putty</a></b> to download PuTTY.</p>
+
+      <p>Once the installer has been downloaded and executed, there will be two applications that will be added: PuTTY itself, and PuTTYgen. Referring back to <b><em><a href ="#cloud_nav">"Navigating Through The Cloud"</a></em></b>, a private key was downloaded. This key is required to authorize access to the instance. Without the key, access will never be granted. This is why it is important to not lose the key file, as you will not be able to access the file again after the creation of your instance.</p>
+
+      <p>The key itself cannot be used to access the instance through PuTTY. It needs its own private key in order to authorize access. To do this, open the PuTTYgen app. Click on the <b>"Load"</b> button to load an existing key. Make sure the file type is <b>"All Files"</b>, and select the private key you downloaded from the OCI website. Click on <b>"Save private key"</b>, and name the new PuTTY key whatever you want.</p>
+
+      <h1>Creating and Configuring Your Putty Session</h1>
+      <p>After creating the private PuTTY key, open the PuTTY app. This is where you will create the SSH to gain access to your instance. Before you can access it, you need to list the required information to connect to the instance. Fill the <b>"Host Name"</b> with the IP of your instance (located at your instance on the OCI website). Check the SSH connection type and check the <b>"Only on clean exit"</b> for when you close PuTTY.</p>
+
+      <p>On the left of the PuTTY application is the <b>"Category"</b> section. Locate to Connection -> SSH -> Auth. In that tab is where you have to load in the generated PuTTY key required to access the instance. After it is done, go back to the <b>"Session"</b> category and go to the <b>"Saved Sessions"</b> section. Click on the <b>"Default Settings"</b> and press the <b>"Save"</b> button on the right to save all of the information the next time you come back to PuTTY. This way you do not need to reenter all the information every time you open PuTTY.</p>
+
+      <p>Click on the <b>"Open"</b> button on the bottom <em>(or press <b>"Enter"</b> on your keyboard)</em> to open the session. The default login is <b>"opc"</b> unless otherwise stated.</p> 
+
+      <p><b>NOTE:</b> NEVER share your PuTTY key or OCI key to ANYONE YOU DO NOT TRUST!</p>
+
     </div>
     <footer class="footer">
     <p>&copy; 2025 ColonelMDoge. All rights reserved.</p>

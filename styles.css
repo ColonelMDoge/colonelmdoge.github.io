@@ -68,6 +68,9 @@ html, body {
   text-align: left;
   line-height: 1.5;
 }
+.guideText h1 {
+  padding-top: 35px;
+}
 .links {
   display: flex;
   justify-content: center; 
