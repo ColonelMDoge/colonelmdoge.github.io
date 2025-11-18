@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="resources/CMDProfileNew.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/monokai-sublime.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <title>OCI Setup</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav">
+        <ul class = "outerUl">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Guides</a>
+            <ul class="dropdown-content">
+              <li><a href="guide1.html">How To Setup An Oracle Cloud Server</a></li>
+              <li><a href="guide2.html">Minecraft Server Setup Guide</a></li>
+              <li><a href="guide3.html">How To Make A Discord Bot Using JDA</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <div class="bgimg2">
+      <span class = "titletext"> How To Create A Minecraft Server </span>
+    </div>
+
+    <div class="about centered guideText">
+      <h1> Who Should Read This Guide?</h1>
+      <p>From personal experience, hosting Minecraft servers from free online platforms were always a nuisance. Slower than desired, underperforming, barely any control, and allocated resources were very scarce. Instead, if you created a Cloud Compute Instance through OCI, you can get around the rabbit hole and create something far more powerful.</em></p>
+
+      <h1> Prerequsite: Installing TMUX On Your Server </h1>
+      <p>TMUX is a application that can be installed through your SSH. Its major use is that it can create "headless windows" that act as separate secure shell hosts. It is very useful because these windows <b>persist after the closure of the secure shell</b> <em>(in this case, Putty)</em> that connects with the server. Multiple of these windows can be run simultaneously, too. TMUX is what elevates a localhost only server to a dedicated 24/7 server that is playable anytime.</p>
+
+      <p>To install TMUX, go to the terminal of the SSH and execute this command:</p>
+
+      <pre><code class="language-bash">sudo yum install tmux</code></pre>
+
+      <p>Enter <b>"y"</b> after the prompt and TMUX should be installed onto your instance.</p>
+
+      <h1>Convenient TMUX Commands</h1>
+      <table class="tmux-table">
+        <thead>
+          <tr>
+            <th>Action</th>
+            <th>Command</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Creating a new session</td>
+            <td><pre><code class="language-bash">tmux new -s [SESSION NAME]</code></pre></td>
+          </tr>
+          <tr>
+            <td>Killing a session</td>
+            <td><pre><code class="language-bash">tmux kill-ses -t [SESSION NAME]</code></pre></td>
+          </tr>
+          <tr>
+            <td>Attaching to a session</td>
+            <td><pre><code class="language-bash">tmux a -t [SESSION NAME]</code></pre></td>
+          </tr>
+          <tr>
+            <td>Listing sessions</td>
+            <td><pre><code class="language-bash">tmux ls</code></pre></td>
+          </tr>
+          <tr>
+            <td>Exiting a session</td>
+            <td><pre><code class="language-bash">Ctrl B + D</code></pre></td>
+          </tr>
+          <tr>
+            <td>Renaming a session</td>
+            <td><pre><code class="language-bash">Ctrl B + $</code></pre></td>
+          </tr>
+        </tbody>
+      </table> 
+      <p><b>NOTE:</b> More information can be found here at <b><a href="https://tmuxcheatsheet.com/">https://tmuxcheatsheet.com/</a></b></p>
+    </div>
+    <footer class="footer">
+    <p>&copy; 2025 ColonelMDoge. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

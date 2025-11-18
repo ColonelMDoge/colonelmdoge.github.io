@@ -51,6 +51,7 @@ html, body {
 }
 .centered {
   text-align: center;
+  margin: auto;
 }
 .leftwards {
   position: relative;
@@ -168,4 +169,32 @@ header {
 /* Show menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.tmux-table {
+  width: fit-content;
+  border-collapse: collapse;
+  margin: 20px auto;
+  font-family: 'Roboto', sans-serif;
+}
+.tmux-table th,
+.tmux-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  vertical-align: center;
+}
+.tmux-table th {
+  background-color: rgba(76,175,80, 1);
+  color: #fff;
+  text-align: left;
+}
+pre {
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: fit-content;
+  font-size: 15px;
+  overflow: hidden;
 }
