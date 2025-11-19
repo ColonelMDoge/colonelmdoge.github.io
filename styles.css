@@ -1,8 +1,34 @@
 body, h1, h2, h3, h4, h5, h6, p {font-family: "Roboto", sans-serif;}
+
 html, body {
   margin: 0;
   padding: 0;
 }
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgba(76,175,80, 0.75);
+  z-index: 1000;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+pre {
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: fit-content;
+  font-size: 15px;
+  overflow: hidden;
+}
+
 .bgimg1 {
   position: relative;
   background-color: rgba(76,175,80, 1.0);
@@ -35,6 +61,7 @@ html, body {
   color: white;          
   padding: 20px 40px; 
 }
+
 .profile-pic {
   position: absolute;
   bottom: -50px;            
@@ -46,32 +73,39 @@ html, body {
   border: 5px solid black;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
+
 .about {
   padding-top: 35px;
 }
+
 .centered {
   text-align: center;
   margin: auto;
 }
+
 .leftwards {
   position: relative;
   text-align: left;
 }
+
 .paragraph {
   padding-left: 250px; 
   padding-right: 250px; 
   text-align: left;
   line-height: 1.5;
 }
+
 .guideText p {
   padding-left: 250px; 
   padding-right: 250px; 
   text-align: left;
   line-height: 1.5;
 }
+
 .guideText h1 {
   padding-top: 35px;
 }
+
 .links {
   display: flex;
   justify-content: center; 
@@ -80,6 +114,7 @@ html, body {
   gap: 20px;
   width: 100%;  
 }
+
 .footer {
   margin-top: 25px;
   background-color: rgba(76,175,80, 1.0);
@@ -90,31 +125,21 @@ html, body {
   font-family: "monospace", sans-serif;
   color: white;
 }
+
 .project {
   padding-top: 50px;
   display: inline-flex;
   gap: 100px;
 }
+
 .shadow {
   border-radius: 15px; 
   margin: 20px 0; 
   box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
+
 .shadowBorder {
   border: 3px solid black; 
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
-}
-
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 70px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background: rgba(76,175,80, 0.75);
-  z-index: 1000;
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
@@ -166,7 +191,6 @@ header {
   background-color: rgba(68,68,68,0.5);
 }
 
-/* Show menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -177,24 +201,16 @@ header {
   margin: 20px auto;
   font-family: 'Roboto', sans-serif;
 }
+
 .tmux-table th,
 .tmux-table td {
   border: 1px solid #ddd;
   padding: 12px;
   vertical-align: center;
 }
+
 .tmux-table th {
   background-color: rgba(76,175,80, 1);
   color: #fff;
   text-align: left;
-}
-pre {
-  border: 1px solid black;
-  border-radius: 10px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: fit-content;
-  font-size: 15px;
-  overflow: hidden;
 }
