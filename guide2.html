@@ -85,6 +85,94 @@
         </tbody>
       </table> 
       <p><b>NOTE:</b> More information can be found here at <b><a href="https://tmuxcheatsheet.com/">https://tmuxcheatsheet.com/</a></b></p>
+
+      <h1>Opening The Ports</h1>
+      <p>Previously, you had create Ingress Rules through the Primary VNIC. Unfortunately, that is only half of the work in order to get your ports online. Before the server can start, they must be opened for you to connect to the server. By default, the port for Minecraft servers is 25565. Other ports may be used, however. To open a port, run these commands in the SSH terminal:
+
+      <table class="tmux-table">
+        <thead>
+          <tr>
+            <th>Action</th>
+            <th>Command</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Opening the TCP Port</td>
+            <td><pre><code class="language-bash">sudo firewall-cmd --permanent --zone=public --add-port=25565/tcp</code></pre></td>
+          </tr>
+          <tr>
+            <td>Opening the UDP Port</td>
+            <td><pre><code class="language-bash">sudo firewall-cmd --permanent --zone=public --add-port=25565/udp</code></pre></td>
+          </tr>
+          <tr>
+            <td>Reload/Update Ports</td>
+            <td><pre><code class="language-bash">sudo firewall-cmd --reload</code></pre></td>
+          </tr>
+        </tbody>
+      </table> 
+
+      <h1>Downloading Necessary Files</h1>
+      <p>different Minecraft versions require different versions of JAVA. Recent versions of Minecraft require JAVA version 20, while older versions of Minecraft require JAVA version 8. If you have not downloaded JAVA, now is the time to do it. To install JAVA, first check which version you want to download by executing this command in the SSH terminal:</p>
+      <pre><code class="language-bash">sudo yum list java\*</code></pre>
+
+      <p>After finding which version you want to install, run this command next and hit <b>"y"</b> to confirm:</p>
+      <pre><code>sudo yum install [JAVA VERSION YOU WANT FROM THE LIST]</code></pre>
+
+      <p><b>NOTE:</b> Exclude the keyword <b>"sudo"</b> if you are executing it in a TMUX window, or else it will not work!</p>
+
+      <p>After installing JAVA, download the Minecraft server JAR file from <b><a href="https://www.minecraft.net/en-us/download/server">https://www.minecraft.net/en-us/download/server</a></b> for the recent version of Minecraft, or browse throughout the internet for the right version. Transfer this file into your instance by using WinSCP.</p>
+
+      <p>If you want to install modpack servers, some providers include CurseForge, Feed The Beast, and Modrinth. The files already have everything bundled up and ready to go!</p>
+
+      <h1>Running The Server</h1>
+      <p>If you had not already done so, create a new TMUX window. Head to the directory that you're server is in and ensure the files have the correct permissions. Here is another convenient table to show possible commands to start the server:</p>
+
+      <table class="tmux-table">
+        <thead>
+          <tr>
+            <th>Action</th>
+            <th>Generic Command</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Basic Start Command</td>
+            <td><pre><code class="language-bash leftwards">java -Xmx[MEMORY][M/G] 
+-Xms[MEMORY][M/G] 
+-jar [MINECRAFT SERVER JAR NAME].jar 
+nogui</code></pre></td>
+            <td><pre><code class="language-bash leftwards">java -Xmx1024M -Xms1024M 
+-jar minecraft_server.1.20.1.jar 
+nogui</code></pre></td>
+          </tr>
+          <tr>
+            <td>Full Generic Command</td>
+            <td><pre><code class="language-bash leftwards">[FOLDER DIRECTORY OF REQUIRED JAVA VERSION] java 
+-Xmx[#]G -Xms[#]G 
+[-XX:][SERVER OPTIONS] -jar 
+[SERVER JAR NAME].jar 
+nogui PAUSE</code></pre></td>
+            <td><pre><code class="language-bash leftwards">/usr/java/jdk1.8.0_351-aarch64/bin/java 
+-Xmx8G -Xms8G -XX:+UnlockExperimentalVMOptions 
+-XX:+UseG1GC -XX:G1NewSizePercent=20 
+-XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 
+-XX:G1HeapRegionSize=32M -Dfml.readTimeout=180 
+-jar forge-1.12.2-14.23.5.2847-universal.jar 
+nogui PAUSE</code></pre></td>
+          </tr>
+        </tbody>
+      </table> 
+
+      <p><b>IMPORTANT NOTE:</b> If you end up using another port other than 25565, you must open the ports through the Primary VNIC and through your terminal. Also, in the <b>"server.properties"</b> file of your Minecraft server, be sure to change the port from 25565 to your new port.</p>
+
+      <p><b>NOTE:</b> After running the server for the first time, it will stop itself. This is caused by the <b>"eula.txt"</b> file. This file is a text file that requires you to comply with the EULA terms in order to run the server. Simply set the value inside to <b>"true"</b> and save the file. <em>(You might want to press the refresh button in WinSCP to see the update files).</em> Rerun the server again.</p>
+
+      <p><b>NOTE:</b> If you are setting up a modified Minecraft server to change the experience of Minecraft, simply substitute [SERVER JAR NAME] with the Forge server .jar file to run the server. <b>Do NOT run the other server .jar file,</b> otherwise it will create a Minecraft server without modifications.</p>
+
+      <p><b>ASIDE:</b> Sometimes a modpack server folder may contain its own run command shell or bash script. However, I highly recommend creating your own run commands as going through multiple files to change server variables is very cumbersome.</p>
+
     </div>
     <footer class="footer">
     <p>&copy; 2025 ColonelMDoge. All rights reserved.</p>
